@@ -4,135 +4,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body {
+        margin: 0;
         font-family: 'Lato', sans-serif;
       }
 
-      .sidenav {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-text-size-adjust: 100%;
-        --blue: #007bff;
-        --indigo: #6610f2;
-        --purple: #6f42c1;
-        --pink: #e83e8c;
-        --red: #dc3545;
-        --orange: #fd7e14;
-        --yellow: #ffc107;
-        --green: #28a745;
-        --teal: #20c997;
-        --cyan: #17a2b8;
-        --white: #fff;
-        --gray: #6c757d;
-        --gray-dark: #343a40;
-        --primary: #007bff;
-        --secondary: #6c757d;
-        --success: #28a745;
-        --info: #17a2b8;
-        --warning: #ffc107;
-        --danger: #dc3545;
-        --light: #f8f9fa;
-        --dark: #343a40;
-        --breakpoint-xs: 0;
-        --breakpoint-sm: 576px;
-        --breakpoint-md: 768px;
-        --breakpoint-lg: 992px;
-        --breakpoint-xl: 1200px;
-        --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-          Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-          'Segoe UI Emoji', 'Segoe UI Symbol';
-        --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-          'Liberation Mono', 'Courier New', monospace;
-        font-weight: 400;
-        text-align: left;
-        font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        line-height: 1.4285em;
-        color: rgba(0, 0, 0, 0.87);
-        box-sizing: inherit;
-        height: 100%;
+      .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
         position: fixed;
-        z-index: 1;
-        top: 48px;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 15px;
-        width: 250px;
+        height: 100%;
+        overflow: auto;
       }
 
-      .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
+      .sidebar a {
         display: block;
-        transition: 0.3s;
-      }
-
-      .sidenav a:hover {
-        color: #f1f1f1;
-      }
-
-      .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-      }
-
-      #main {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-text-size-adjust: 100%;
-        --blue: #007bff;
-        --indigo: #6610f2;
-        --purple: #6f42c1;
-        --pink: #e83e8c;
-        --red: #dc3545;
-        --orange: #fd7e14;
-        --yellow: #ffc107;
-        --green: #28a745;
-        --teal: #20c997;
-        --cyan: #17a2b8;
-        --white: #fff;
-        --gray: #6c757d;
-        --gray-dark: #343a40;
-        --primary: #007bff;
-        --secondary: #6c757d;
-        --success: #28a745;
-        --info: #17a2b8;
-        --warning: #ffc107;
-        --danger: #dc3545;
-        --light: #f8f9fa;
-        --dark: #343a40;
-        --breakpoint-xs: 0;
-        --breakpoint-sm: 576px;
-        --breakpoint-md: 768px;
-        --breakpoint-lg: 992px;
-        --breakpoint-xl: 1200px;
-        --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI',
-          Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-          'Segoe UI Emoji', 'Segoe UI Symbol';
-        --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-          'Liberation Mono', 'Courier New', monospace;
-        font-weight: 400;
-        text-align: left;
-        font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-        font-size: 14px;
-        line-height: 1.4285em;
-        color: rgba(0, 0, 0, 0.87);
-        box-sizing: inherit;
-        transition: margin-left 0.5s;
+        color: black;
         padding: 16px;
-        margin-left: 250px;
+        text-decoration: none;
       }
 
-      @media screen and (max-height: 450px) {
-        .sidenav {
-          padding-top: 15px;
+      .sidebar a.active {
+        background-color: #04aa6d;
+        color: white;
+      }
+
+      .sidebar a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+
+      div.content {
+        margin-left: 200px;
+        padding: 1px 16px;
+        height: 1000px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
         }
-        .sidenav a {
-          font-size: 18px;
+        .sidebar a {
+          float: left;
+        }
+        div.content {
+          margin-left: 0;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        .sidebar a {
+          text-align: center;
+          float: none;
         }
       }
     </style>
@@ -154,11 +80,16 @@
     />
   </head>
   <body>
-    <!-- <div id="mySidenav" class="sidenav">
-      <a href="#">About</a>
-    </div> -->
-
-    <my-app #main>loading</my-app>
+    <div class="sidebar">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="content">
+      <my-app>loading</my-app>
+    </div>
+    <!-- <my-app #main>loading</my-app> -->
   </body>
 </html>
 
