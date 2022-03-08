@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { Customer } from "src/app/model/customer";
 import { Router } from '@angular/router';
 import { GetAllCustomersService } from './../../services/get-all-customers.service';
 import { SharedService } from './../../services/shared.service';
@@ -9,7 +8,6 @@ import { SharedService } from './../../services/shared.service';
   styleUrls: ['./view-customers.component.css'],
 })
 export class ViewCustomersComponent implements OnInit {
-  // : Customer[]
   customerList = [];
   constructor(
     private sharedService: SharedService,
