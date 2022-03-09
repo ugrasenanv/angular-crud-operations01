@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 import { UpdateTaskComponent } from './components/update-task/update-task.component';
 import { ViewTaskComponent } from './components/view-task/view-task.component';
-import { ViewCustomerRouteGuardService } from './route-guards/view-customer-route-guard';
+import { ViewTaskRouteGuardService } from './route-guards/view-task-route-guard';
 
 const routes: Routes = [
   {
@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'update',
     component: UpdateTaskComponent,
-    canActivate: [ViewCustomerRouteGuardService],
+    canActivate: [ViewTaskRouteGuardService],
   },
   {
     path: 'view',
