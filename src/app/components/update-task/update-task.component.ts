@@ -6,7 +6,6 @@ import { SharedTaskService } from '../../task-services/shared.service';
 @Component({
   selector: 'app-update-task',
   templateUrl: './update-task.component.html',
-  styleUrls: ['./update-task.component.css'],
 })
 export class UpdateTaskComponent implements OnInit {
   updateTaskForm: FormGroup;
