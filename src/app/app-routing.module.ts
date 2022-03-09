@@ -1,4 +1,3 @@
-import { ViewCustomersComponent } from './components/view-customers/view-customers.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateCustomerComponent } from './components/create-customer/create-customer.component';
