@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { SharedTaskService } from 'src/app/task-services/shared.service';
+// import { SharedTaskService } from 'src/app/task-services/shared.service';
 
 @Component({
   selector: 'app-create-task',
@@ -12,7 +12,6 @@ export class CreateTaskComponent implements OnInit {
   createTaskForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    // public toastr: ToastrManager,
     private sharedService: SharedTaskService
   ) {
     sharedService.setViewTaskId(0);

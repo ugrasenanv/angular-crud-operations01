@@ -34,6 +34,7 @@ import { SharedTaskService } from './task-services/shared.service';
     ViewCustomersComponent,
     ViewTaskComponent,
     TaskModalComponent,
+    CreateTaskComponent,
   ],
   bootstrap: [AppComponent],
   providers: [
