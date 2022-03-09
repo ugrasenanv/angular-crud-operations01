@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'view',
-    component: ViewCustomersComponent,
+    component: ViewTaskComponent,
   },
   {
     path: '',
