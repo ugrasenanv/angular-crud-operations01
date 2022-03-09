@@ -1,6 +1,7 @@
-<app-navigation-bar></app-navigation-bar>
-
-<h3 align="left">Create Task</h3>
+<app-navigation-bar></app-navigation-bar> <br /><br /><br />
+<a class="nav-link" [routerLink]="['/create']"
+  ><h3 align="left">Create Task</h3></a
+>
 
 <table class="table">
   <thead class="thead-light">
@@ -9,7 +10,8 @@
       <th scope="col">Task Name</th>
       <th scope="col">Project</th>
       <th scope="col">Comments</th>
-      <th scope="col">Actions</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -27,6 +29,22 @@
         >
           Edit
         </button>
+        <!-- <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deleteCustomer(customer._id)"
+        >
+          Delete
+        </button> -->
+      </td>
+      <td>
+        <!-- <button
+          type="button"
+          class="btn btn-success mr-1"
+          (click)="viewCustomer(customer._id)"
+        >
+          Edit
+        </button> -->
         <button
           type="button"
           class="btn btn-danger"
