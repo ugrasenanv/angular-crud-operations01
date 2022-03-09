@@ -13,6 +13,7 @@ import { ViewCustomersComponent } from './components/view-customers/view-custome
 import { GetAllCustomersService } from './services/get-all-customers.service';
 import { SharedService } from './services/shared.service';
 import { GetACustomerService } from './services/get-acustomer.service';
+import { ViewTaskComponent } from './components/view-task/view-task.component';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { GetACustomerService } from './services/get-acustomer.service';
     CreateCustomerComponent,
     UpdateCustomerComponent,
     ViewCustomersComponent,
+    ViewTaskComponent
   ],
   bootstrap: [AppComponent],
   providers: [GetAllCustomersService, SharedService, GetACustomerService],

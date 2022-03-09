@@ -5,6 +5,7 @@ import { CreateCustomerComponent } from './components/create-customer/create-cus
 import { UpdateCustomerComponent } from './components/update-customer/update-customer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ViewCustomerRouteGuardService } from './routeGuards/view-customer-route-guard';
+import { ViewTaskComponent } from './components/view-task/view-task.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: ViewCustomersComponent,
+    component: ViewTaskComponent,
   },
 ];
 
