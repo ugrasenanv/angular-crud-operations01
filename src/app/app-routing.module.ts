@@ -3,9 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateCustomerComponent } from './components/create-customer/create-customer.component';
 import { UpdateCustomerComponent } from './components/update-customer/update-customer.component';
-import { HomeComponent } from './components/home/home.component';
-import { ViewCustomerRouteGuardService } from './routeGuards/view-customer-route-guard';
 import { ViewTaskComponent } from './components/view-task/view-task.component';
+import { ViewCustomerRouteGuardService } from './route-guards/view-customer-route-guard';
 
 const routes: Routes = [
   {

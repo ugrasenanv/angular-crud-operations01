@@ -14,6 +14,7 @@ import { GetAllCustomersService } from './services/get-all-customers.service';
 import { SharedService } from './services/shared.service';
 import { GetACustomerService } from './services/get-acustomer.service';
 import { ViewTaskComponent } from './components/view-task/view-task.component';
+import { NgxAsideModule } from 'ngx-aside';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { ViewTaskComponent } from './components/view-task/view-task.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    NgxAsideModule,
     // ToastrModule.forRoot()
   ],
   declarations: [
@@ -30,7 +32,7 @@ import { ViewTaskComponent } from './components/view-task/view-task.component';
     CreateCustomerComponent,
     UpdateCustomerComponent,
     ViewCustomersComponent,
-    ViewTaskComponent
+    ViewTaskComponent,
   ],
   bootstrap: [AppComponent],
   providers: [GetAllCustomersService, SharedService, GetACustomerService],
