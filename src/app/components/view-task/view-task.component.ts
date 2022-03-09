@@ -1,18 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-// import { Task } from "src/app/model/task";
 import { Router } from '@angular/router';
 import { GetAllTasksService } from '../../task-services/get-all-task.service';
 import { SharedTaskService } from '../../task-services/shared.service';
-// import { GetAllTasksService } from 'src/app/task-services/get-all-task.service';
-// import { SharedTaskService } from 'src/app/task-services/shared.service';
-// import { GetAllTasksService } from '../../services/get-all-tasks.service';
-// import { SharedService } from '../../services/shared.service';
 @Component({
   selector: 'app-view-task',
   templateUrl: './view-task.component.html',
 })
 export class ViewTaskComponent implements OnInit {
-  // : Task[]
   taskList = [];
   constructor(
     private sharedService: SharedTaskService,
