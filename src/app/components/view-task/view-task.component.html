@@ -5,14 +5,16 @@
 <table class="table">
   <thead class="thead-light">
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Phone</th>
+      <th scope="col">Task ID</th>
+      <th scope="col">Task Name</th>
+      <th scope="col">Project</th>
       <th scope="col">Email</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let customer of customerList">
+      <td>{{ customer._id }}</td>
       <td>{{ customer.name }}</td>
       <td>{{ customer.phone }}</td>
       <td>{{ customer.email }}</td>
