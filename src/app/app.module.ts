@@ -16,6 +16,9 @@ import { GetACustomerService } from './services/get-acustomer.service';
 import { ViewTaskComponent } from './components/view-task/view-task.component';
 import { NgxAsideModule } from 'ngx-aside';
 import { TaskModalComponent } from './components/modal/task-modal.component';
+import { GetAllTasksService } from './task-services/get-all-task.service';
+import { GetATaskService } from './task-services/get-atask.service';
+import { SharedTaskService } from './task-services/shared.service';
 
 @NgModule({
   imports: [
@@ -37,6 +40,13 @@ import { TaskModalComponent } from './components/modal/task-modal.component';
     TaskModalComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [GetAllCustomersService, SharedService, GetACustomerService],
+  providers: [
+    GetAllTasksService,
+    GetAllCustomersService,
+    SharedService,
+    GetATaskService,
+    SharedTaskService,
+    GetACustomerService,
+  ],
 })
 export class AppModule {}

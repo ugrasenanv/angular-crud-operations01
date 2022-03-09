@@ -1,28 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-// import { Customer } from "src/app/model/customer";
+// import { Task } from "src/app/model/task";
 import { Router } from '@angular/router';
-import { GetAllCustomersService } from '../../services/get-all-customers.service';
-import { SharedService } from '../../services/shared.service';
+import { GetAllTasksService } from '../../task-services/get-all-task.service';
+import { SharedTaskService } from '../../task-services/shared.service';
+// import { GetAllTasksService } from 'src/app/task-services/get-all-task.service';
+// import { SharedTaskService } from 'src/app/task-services/shared.service';
+// import { GetAllTasksService } from '../../services/get-all-tasks.service';
+// import { SharedService } from '../../services/shared.service';
 @Component({
   selector: 'app-view-task',
   templateUrl: './view-task.component.html',
 })
 export class ViewTaskComponent implements OnInit {
-  // : Customer[]
-  customerList = [];
+  // : Task[]
+  taskList = [];
   constructor(
-    private sharedService: SharedService,
+    private sharedService: SharedTaskService,
     private router: Router,
-    private getAllCustomers: GetAllCustomersService
+    private getAllTasks: GetAllTasksService
   ) {
-    sharedService.setViewCustomerId(null);
+    sharedService.setViewTaskId(null);
   }
 
   ngOnInit() {
-    const promise = this.getAllCustomers.getAllCustomers();
+    const promise = this.getAllTasks.getAllTasks();
     promise.then(
       (response) => {
-        this.customerList = response['res'];
+        this.taskList = response['res'];
       },
       (error) => {
         console.log('error ' + error);
@@ -30,16 +34,16 @@ export class ViewTaskComponent implements OnInit {
     );
   }
 
-  updateCustomer(customer) {
-    console.log('update customer ' + JSON.stringify(customer));
+  updateTask(task) {
+    console.log('update task ' + JSON.stringify(task));
   }
 
-  deleteCustomer(id) {
-    console.log('delete customer ' + id);
+  deleteTask(id) {
+    console.log('delete task ' + id);
   }
 
-  viewCustomer(id) {
-    this.sharedService.setViewCustomerId(id);
+  viewTask(id) {
+    this.sharedService.setViewTaskId(id);
     this.router.navigate(['/update']);
   }
   isSettings = false;

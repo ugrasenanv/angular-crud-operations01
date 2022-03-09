@@ -2,7 +2,7 @@
 <a class="nav-link" [routerLink]="['/create']"
   ><h3 align="left">Create Task</h3></a
 >
-<button type="button" class="btn btn-primary btn-sm" (click)="onSettingsOpen()">Open Aside</button>
+<!-- <button type="button" class="btn btn-primary btn-sm" (click)="onSettingsOpen()">Open Aside</button> -->
 <table class="table">
   <thead class="thead-light">
     <tr>
@@ -15,24 +15,24 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let customer of customerList">
-      <td>{{ customer._id }}</td>
-      <td>{{ customer.name }}</td>
-      <td>{{ customer.project }}</td>
-      <td>{{ customer.commetns }}</td>
+    <tr *ngFor="let task of taskList">
+      <td>{{ task._id }}</td>
+      <td>{{ task.name }}</td>
+      <td>{{ task.project }}</td>
+      <td>{{ task.commetns }}</td>
 
       <td>
         <button
           type="button"
           class="btn btn-success mr-1"
-          (click)="viewCustomer(customer._id)"
+          (click)="viewTask(task._id)"
         >
           Edit
         </button>
         <!-- <button
           type="button"
           class="btn btn-danger"
-          (click)="deleteCustomer(customer._id)"
+          (click)="deleteTask(task._id)"
         >
           Delete
         </button> -->
@@ -41,14 +41,14 @@
         <!-- <button
           type="button"
           class="btn btn-success mr-1"
-          (click)="viewCustomer(customer._id)"
+          (click)="viewTask(task._id)"
         >
           Edit
         </button> -->
         <button
           type="button"
           class="btn btn-danger"
-          (click)="deleteCustomer(customer._id)"
+          (click)="deleteTask(task._id)"
         >
           Delete
         </button>
