@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
-import { CreateCustomerComponent } from './components/create-customer/create-customer.component';
 import { UpdateCustomerComponent } from './components/update-customer/update-customer.component';
 import { GetAllCustomersService } from './services/get-all-customers.service';
 import { SharedService } from './services/shared.service';
@@ -30,7 +29,6 @@ import { CreateTaskComponent } from './components/create-task/create-task.compon
     AppComponent,
     HomeComponent,
     NavigationBarComponent,
-    CreateCustomerComponent,
     UpdateCustomerComponent,
     ViewTaskComponent,
     TaskModalComponent,

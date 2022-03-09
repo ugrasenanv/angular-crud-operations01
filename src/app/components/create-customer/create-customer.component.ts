@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GetAllCustomersService } from './../../services/get-all-customers.service';
 import { SharedService } from './../../services/shared.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-// import { ToastrManager } from "ng6-toastr-notifications";
 
 @Component({
   selector: 'app-create-customer',
