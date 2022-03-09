@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateCustomerComponent } from './components/create-customer/create-customer.component';
+import { CreateTaskComponent } from './components/create-task/create-task.component';
 import { UpdateCustomerComponent } from './components/update-customer/update-customer.component';
 import { ViewTaskComponent } from './components/view-task/view-task.component';
 import { ViewCustomerRouteGuardService } from './route-guards/view-customer-route-guard';
@@ -8,7 +9,7 @@ import { ViewCustomerRouteGuardService } from './route-guards/view-customer-rout
 const routes: Routes = [
   {
     path: 'create',
-    component: CreateCustomerComponent,
+    component: CreateTaskComponent,
   },
   {
     path: 'update',

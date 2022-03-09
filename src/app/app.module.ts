@@ -16,6 +16,7 @@ import { TaskModalComponent } from './components/modal/task-modal.component';
 import { GetAllTasksService } from './task-services/get-all-task.service';
 import { GetATaskService } from './task-services/get-atask.service';
 import { SharedTaskService } from './task-services/shared.service';
+import { CreateTaskComponent } from './components/create-task/create-task.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,6 @@ import { SharedTaskService } from './task-services/shared.service';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     NgxAsideModule,
-    // ToastrModule.forRoot()
   ],
   declarations: [
     AppComponent,
@@ -34,6 +34,7 @@ import { SharedTaskService } from './task-services/shared.service';
     UpdateCustomerComponent,
     ViewTaskComponent,
     TaskModalComponent,
+    CreateTaskComponent,
   ],
   bootstrap: [AppComponent],
   providers: [
