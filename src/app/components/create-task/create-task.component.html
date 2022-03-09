@@ -34,18 +34,18 @@
     </div>
 
     <div class="form-group">
-      <label>commetns : </label>
+      <label>comments : </label>
       <input
         type="text"
         class="form-control"
-        formControlName="commetns"
+        formControlName="comments"
         placeholder="Enter Task phone"
       />
       <span
         class="warning"
-        *ngIf="createTaskForm.controls['commetns'].errors?.required"
+        *ngIf="createTaskForm.controls['comments'].errors?.required"
       >
-        *Task commetns is required
+        *Task comments is required
       </span>
     </div>
     <button type="reset" class="btn btn-warning mr-1">Reset</button>
