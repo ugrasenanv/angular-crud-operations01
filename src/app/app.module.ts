@@ -7,12 +7,12 @@ import { HomeComponent } from './components/home/home.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { ViewTaskComponent } from './components/view-task/view-task.component';
 import { NgxAsideModule } from 'ngx-aside';
-import { TaskModalComponent } from './components/modal/task-modal.component';
 import { GetAllTasksService } from './task-services/get-all-task.service';
 import { GetATaskService } from './task-services/get-atask.service';
 import { SharedTaskService } from './task-services/shared.service';
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 import { UpdateTaskComponent } from './components/update-task/update-task.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   imports: [
@@ -28,8 +28,8 @@ import { UpdateTaskComponent } from './components/update-task/update-task.compon
     NavigationBarComponent,
     UpdateTaskComponent,
     ViewTaskComponent,
-    TaskModalComponent,
     CreateTaskComponent,
+    ModalComponent,
   ],
   bootstrap: [AppComponent],
   providers: [
