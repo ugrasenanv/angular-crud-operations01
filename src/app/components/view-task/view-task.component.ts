@@ -42,4 +42,15 @@ export class ViewTaskComponent implements OnInit {
     this.sharedService.setViewCustomerId(id);
     this.router.navigate(['/update']);
   }
+  isSettings = false;
+
+  onSettingsOpen() {
+    this.isSettings = !this.isSettings;
+    console.log('should toggle settings->', this.isSettings);
+  }
+
+  onSettingsClose(event: boolean) {
+    this.isSettings = event;
+    console.log('Should return false when closed->', event);
+  }
 }
