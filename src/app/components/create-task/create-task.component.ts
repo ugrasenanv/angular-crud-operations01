@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SharedTaskService } from '../../task-services/shared.service';
@@ -17,13 +17,8 @@ export class CreateTaskComponent implements OnInit {
     this.createTaskForm = formBuilder.group({
       id: [0],
       name: ['', Validators.required],
-      phone: [''],
-      email: ['', Validators.email],
-      age: [
-        '',
-        [Validators.min(0), Validators.max(100), Validators.pattern('^[0-9]*')],
-      ],
-      address: [],
+      project: ['', Validators.required],
+      Comments: ['', Validators.required],
     });
   }
 
@@ -38,5 +33,15 @@ export class CreateTaskComponent implements OnInit {
     } else {
       // this.toastr.warningToastr("This is not a valid form.", "Alert!");
     }
+  }
+
+  @ViewChild('myModal', { static: false }) modal: ElementRef;
+
+  open() {
+    this.modal.nativeElement.style.display = 'block';
+  }
+
+  close() {
+    this.modal.nativeElement.style.display = 'none';
   }
 }
