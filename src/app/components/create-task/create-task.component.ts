@@ -12,7 +12,6 @@ export class CreateTaskComponent implements OnInit {
   createTaskForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    // public toastr: ToastrManager,
     private sharedService: SharedTaskService
   ) {
     sharedService.setViewTaskId(0);
