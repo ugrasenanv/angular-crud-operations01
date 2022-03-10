@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { GetAllTasksService } from '../../task-services/get-all-task.service';
 import { SharedTaskService } from '../../task-services/shared.service';
+import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'app-view-task',
   templateUrl: './view-task.component.html',
@@ -15,6 +16,8 @@ export class ViewTaskComponent implements OnInit {
   ) {
     sharedService.setViewTaskId(null);
   }
+
+  @ViewChild('modal', { static: false }) modal: ModalComponent;
 
   ngOnInit() {
     const promise = this.getAllTasks.getAllTasks();
@@ -50,5 +53,9 @@ export class ViewTaskComponent implements OnInit {
   onSettingsClose(event: boolean) {
     this.isSettings = event;
     console.log('Should return false when closed->', event);
+  }
+
+  openModal() {
+    this.modal.open();
   }
 }

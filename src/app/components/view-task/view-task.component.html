@@ -1,7 +1,9 @@
 <app-navigation-bar></app-navigation-bar> <br /><br /><br />
-<a class="nav-link" [routerLink]="['/create']"
+<a class="nav-link" [routerLink]="['']" (click)="openModal()"
   ><h3 align="left">Create Task</h3></a
 >
+<app-modal #modal></app-modal>
+<!-- <app-create-task #modal> </app-create-task> -->
 <!-- <button type="button" class="btn btn-primary btn-sm" (click)="onSettingsOpen()">Open Aside</button> -->
 <table class="table">
   <thead class="thead-light">
@@ -19,7 +21,7 @@
       <td>{{ task._id }}</td>
       <td>{{ task.name }}</td>
       <td>{{ task.project }}</td>
-      <td>{{ task.commetns }}</td>
+      <td>{{ task.comments }}</td>
 
       <td>
         <button

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { taskList } from '../data/task-data';
-// import { Task } from "src/app/model/task";
-// import { taskList } from './../data/data';
+
 @Injectable()
 export class GetATaskService {
   // : Task;

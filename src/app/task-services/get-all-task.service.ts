@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { taskList } from '../data/task-data';
-// import { Task } from './task';
-// import { taskList } from '../data/data';
-// import { Task } from "../model/Task";
+import { Task } from '../data/task';
 
 @Injectable()
 export class GetAllTasksService {
-  taskList = taskList;
+  taskList: Task[] = taskList;
   constructor() {}
 
   getAllTasks() {
