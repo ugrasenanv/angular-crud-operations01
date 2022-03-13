@@ -6,7 +6,7 @@
   left: 20%;
   top: 15%;
   width: 100%;
-  height: 60%;
+  height: 70%;
   /* overflow: auto; */
   /* background-color: rgba(0, 0, 0, 0.4); Black w/ opacity */
 }
@@ -16,11 +16,11 @@
   margin: auto;
   padding: 2px;
   border: 1px solid #888;
-  width: 57%;
+  width: 42%;
 }
 
 div.content {
-  height: 547px !important;
+  height: 489px !important;
 }
 
 .close-btn {
