@@ -3,11 +3,22 @@ import { Router } from '@angular/router';
 import { GetAllTasksService } from '../../task-services/get-all-task.service';
 import { SharedTaskService } from '../../task-services/shared.service';
 import { ModalComponent } from '../modal/modal.component';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+// import Validation from './utils/validation';
 @Component({
   selector: 'app-view-task',
   templateUrl: './view-task.component.html',
+  styleUrls: ['./view-task.component.css'],
 })
 export class ViewTaskComponent implements OnInit {
+  form: FormGroup;
+  submitted = false;
+
   taskList = [];
   constructor(
     private sharedService: SharedTaskService,
