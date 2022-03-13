@@ -6,6 +6,7 @@ import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'app-view-task',
   templateUrl: './view-task.component.html',
+  styleUrls: ['./view-task.component.css'],
 })
 export class ViewTaskComponent implements OnInit {
   taskList = [];
@@ -55,7 +56,7 @@ export class ViewTaskComponent implements OnInit {
     console.log('Should return false when closed->', event);
   }
 
-  openModal() {
-    this.modal.open();
-  }
+  // openModal() {
+  //   this.modal.open();
+  // }
 }
